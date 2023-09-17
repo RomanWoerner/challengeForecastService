@@ -8,20 +8,15 @@ Dieser Microservice wurde mit Spring Boot 3.1 und Java entwickelt.
 
 ## Funktionen
 - Kommunikation mit der externen "API-Billing" API
-- RESTful API-Endpunkte für CRUD-Funktionen:
-  - Speichern (save)
-  - Lesen (read)
-  - Löschen (delete)
-  - Aktualisieren (update)
 - Grafische Darstellung der Rechnungen der letzten 12 Monate sowie einer aktuellen Prognose:
   - Abrufen der Grafik (GET /invoice/getInvoiceGraphic)
 - Export von Rechnungsdaten in eine Excel-Datei:
   - Export starten (POST /invoice/export)
 - Vorhersage von Rechnungsdaten:
-  - Vorhersage abrufen (GET /forecast/getForecast)
+  - Vorhersage (Forecast) abrufen (GET /forecast/getForecast)
 
 ## Konfiguration
-Der Microservice ist konfigurierbar über eine Config-Datei. Hier sind einige Konfigurationsparameter:
+Der Microservice ist konfigurierbar über eine Config-Datei. Die Konfigurationsparameter müssen angepasst werden:
 
 ```properties
 [challengeForecastService]=
@@ -42,3 +37,6 @@ billing.api.clientSecret=CLIENT-SECRET-HIER
 billing.api.user=USER-HIER
 billing.api.password=PASSWORT-HIER
 billing.api.invoiceListEndpoint=ENDPUNKT-HIER
+
+## Dateiexport
+Es gibt eine Funktion, um Daten wie Rechnungsnummer, Rechnungsdatum und andere relevante Informationen der Rechnungseigenschaften in eine Excel-Datei zu exportieren.
