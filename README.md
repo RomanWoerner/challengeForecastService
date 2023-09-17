@@ -38,5 +38,6 @@ billing.api.user=USER-HIER
 billing.api.password=PASSWORT-HIER
 billing.api.invoiceListEndpoint=ENDPUNKT-HIER
 
+```
 ## Dateiexport
 Es gibt eine Funktion, um Daten wie Rechnungsnummer, Rechnungsdatum und andere relevante Informationen der Rechnungseigenschaften in eine Excel-Datei zu exportieren.
